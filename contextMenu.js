@@ -318,7 +318,7 @@ angular.module('ui.bootstrap.contextMenu', [])
             }
 
             $scope.$apply(function () {
-                var options = $scope.$eval(attrs.contextMenu);
+                var options = $scope.$eval(attrs.contextMenu, {$event: event});
                 var customClass = attrs.contextMenuClass;
                 var modelValue = $scope.$eval(attrs.model);
                 if (options instanceof Array) {
